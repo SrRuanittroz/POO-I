@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.pooiaula01;
+
+public class Principal {
+    
+    public static void main(String[] args) {
+      
+        Pessoa p1 = new Pessoa("111.111.111-11", "João Silva", 25, 1.75, 70.0, "(27) 99999-9999");
+        
+        // Exemplo só para verificar se funcionou:
+        System.out.println("Nome: " + p1.nome);
+        System.out.println("CPF: " + p1.CPF);
+    }
+}
+
+class Pessoa {
+    String nome, CPF, telefone;
+    int idade;
+    double altura, peso;
+    
+    // Construtor da classe
+    Pessoa(String CPF, String nome, int idade,
+            double altura, double peso, String telefone){
+        this.CPF = CPF;
+        this.nome = nome;
+        this.idade = idade;
+        this.altura = altura;
+        this.peso = peso;
+        this.telefone = telefone;
+    }
+}
