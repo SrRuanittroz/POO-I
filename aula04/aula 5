@@ -1,0 +1,61 @@
+package com.mycompany.aula04;
+
+public class Conta {
+
+    private int agencia, numero;
+    private double saldo;
+
+    Conta() {
+    }
+
+    Conta(int agencia, int numero, double saldo) {
+        this.agencia = agencia;
+        this.numero = numero;
+        this.saldo = saldo;
+    }
+
+    int getAgencia() {
+        return agencia;
+    }
+
+    void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    int getNumero() {
+        return numero;
+    }
+
+    void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    double getSaldo() {
+        return saldo;
+    }
+
+    void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    void creditar(double valor) {
+        saldo = saldo + valor;
+    }
+
+    boolean debitar(double valor) {
+        if (valor <= saldo) {
+            saldo = saldo - valor;
+            return true;
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
+        return false;
+    }
+
+    void transferir(double valor, Conta destino) {
+        if (debitar(valor));
+            destino.creditar(valor);
+        } else {
+            System.out.println("Trabnsferência negada.");
+        }
+}
